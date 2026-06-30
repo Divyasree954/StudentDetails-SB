@@ -15,15 +15,23 @@ public class StdService {
 
     public StdEntity storeData(StdEntity S){
         if(S.getAge()>0){
+            S.setEligible(true);
             return repo.save(S);
         }
-        else{
             return null;
-        }
 
     }
 
     public List<StdEntity> findAll() {
         return repo.findAll();
+    }
+
+    public List<StdEntity> getByEle(boolean isEligible) {
+        return repo.findByIsEligible(isEligible);
+    }
+
+
+    public StdEntity getRoll(int i) {
+        return repo.findByrollno(i);
     }
 }

@@ -14,6 +14,7 @@ public class StdEntity {
     String name;
     int age;
     String address;
+    boolean isEligible;
 
     public int getRollno() {
         return rollno;
@@ -45,5 +46,13 @@ public class StdEntity {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public boolean isEligible() {
+        return isEligible;
+    }
+
+    public void setEligible(boolean eligible) {
+        isEligible = eligible;
     }
 }

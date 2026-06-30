@@ -20,9 +20,17 @@ public class StdController {
     public StdEntity add(@RequestBody StdEntity S) {
         return service.storeData(S);
     }
-    @GetMapping("/FindAll")
+    @GetMapping("/findAll")
     public List<StdEntity> findAll(){
         return service.findAll();
+    }
+    @GetMapping("/getEle")
+    public List<StdEntity>getEle(){
+        return service.getByEle(false);
+    }
+    @GetMapping("/getRoll")
+    public StdEntity getRoll(){
+        return service.getRoll(4);
     }
 
 }
